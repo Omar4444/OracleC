@@ -32,6 +32,7 @@ public:
 	// Member functions declaration
 	WoodItem();
 	WoodItem(std::string woodType, double deliveryTime, double itemPrice);
+	double shippingTime(int bf);
 
 };
 

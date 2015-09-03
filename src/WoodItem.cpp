@@ -32,3 +32,21 @@ WoodItem::WoodItem(std::string woodType, double deliveryTime, double itemPrice) 
 	price = itemPrice;
 }
 
+/*
+* Find the shipping time based on BF
+*/
+double WoodItem::shippingTime(int bf) {
+	if (bf >= 1 && bf <= 100)
+		return 1;
+	if (bf >= 101 && bf <= 200)
+		return 2;
+	if (bf >= 201 && bf <= 300)
+		return 3;
+	if (bf >= 301 && bf <= 400)
+		return 4;
+	if (bf >= 401 && bf <= 500)
+		return 5;
+	if (bf >= 501 && bf <= 1000)
+		return 5.5;
+	return 0;
+}

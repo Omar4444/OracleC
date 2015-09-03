@@ -68,5 +68,22 @@ void readInputFile(string inputFilePath) {
  */
 double deliveryTime() {
 	double deliveryETA = 0.0;
+	double next_t;
+	deliveryETA = wi.shippingTime(wi.cherry) * 2.5;
+	next_t = wi.shippingTime(wi.cMaple) * 1.5;
+	if (deliveryETA < next_t)
+		deliveryETA = next_t;
+	next_t = wi.shippingTime(wi.gMaho) * 3;
+	if (deliveryETA < next_t)
+		deliveryETA = next_t;
+	next_t = wi.shippingTime(wi.wenge) * 5;
+	if (deliveryETA < next_t)
+		deliveryETA = next_t;
+	next_t = wi.shippingTime(wi.wOak) * 2.3;
+	if (deliveryETA < next_t)
+		deliveryETA = next_t;
+	next_t = wi.shippingTime(wi.sawdust) * 1;
+	if (deliveryETA < next_t)
+		deliveryETA = next_t;
 	return deliveryETA;
 }
