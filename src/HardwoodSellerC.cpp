@@ -12,6 +12,9 @@
 using namespace std; 
 WoodItem wi;
 
+void readInputFile(string inputFilePath);
+void printOrder();
+
 int main(int argc, char* argv[]) { 
 	if (argc != 2)
 	{
@@ -21,6 +24,7 @@ int main(int argc, char* argv[]) {
 
 	wi.WoodItem();
 	readInputFile(argv[1]);
+	printOrder();
 
 	return 0;
 }
@@ -86,4 +90,26 @@ double deliveryTime() {
 	if (deliveryETA < next_t)
 		deliveryETA = next_t;
 	return deliveryETA;
+}
+
+/*
+* Print the list
+*/
+void printOrder(){
+	cout << "\n Ordered wood\t BF purchased\t price \n\n";
+	if (wi.cherry != 0)
+		cout << "Cherry\t   " << wi.cherry << "\t   $" << wi.cherry * 5.95 << endl;
+	if (wi.cMaple != 0)
+		cout << "Curly Maple\t   " << wi.cMaple << "\t   $" << wi.cMaple * 6 << endl;
+	if (wi.gMaho != 0)
+		cout << "Genuine Mahogany\t   " << wi.gMaho << "\t   $" << wi.gMaho * 9.6 << endl;
+	if (wi.wenge != 0)
+		cout << "Wengey\t   " << wi.wenge << "\t   $" << wi.wenge * 22.35 << endl;
+	if (wi.wOak != 0)
+		cout << "White Oak\t   " << wi.wOak << "\t   $" << wi.wOak * 6.7 << endl;
+	if (wi.sawdust != 0)
+		cout << "Sawdust\t   " << wi.sawdust << "\t   $" << wi.sawdust * 1.5 << endl;
+
+	cout << "The estimated delivery time is: " << deliveryTime() << endl;
+	cout << "The total price is: " << wi.cherry * 5.95 + wi.cMaple * 6 + wi.gMaho * 9.6 + wi.wenge * 22.35 + wi.wOak * 6.7 + wi.sawdust * 1.5 << endl;
 }
