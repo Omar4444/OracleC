@@ -22,6 +22,13 @@ public:
 	double baseDeliveryTime;
 	double price;
 
+	int cherry;
+	int cMaple;
+	int gMaho;
+	int wenge;
+	int wOak;
+	int sawdust;
+
 	// Member functions declaration
 	WoodItem();
 	WoodItem(std::string woodType, double deliveryTime, double itemPrice);

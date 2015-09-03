@@ -13,6 +13,13 @@ WoodItem::WoodItem() {
 	type = "";
 	baseDeliveryTime = 0.0;
 	price = 0.0;
+
+	cherry = 0;
+	cMaple = 0;
+	gMaho = 0;
+	wenge = 0;
+	wOak = 0;
+	sawdust = 0;
 }
 
 /*
