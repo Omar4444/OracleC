@@ -1,7 +1,7 @@
 a) Two. One after the remove and edit (step 7), and one after creating book.txt (step 9).
 b) Aug 24, 2015.
 c) None.
-d) HardwoodSellerC.cpp 32 times, WoodItem.cpp 27 times, and WoodItem.h 31 times.
+d) HardwoodSellerC.cpp 1 times, WoodItem.cpp 1 times, and WoodItem.h 1 times.
 e) git log shows the commit logs (repository history of commits) and git status shows the working tree status.
 f) git log --follow main.java
 g) git log --grep="transaction"
